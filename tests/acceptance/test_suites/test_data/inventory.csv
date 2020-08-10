@@ -1,0 +1,48 @@
+3.2.1,expected,,,,"	# here acceptance test generates the user"
+,supersol,SUCCESS
+3.2.2,expected,,,,"	# here acceptance test generates the user not logged in"
+,supersol,FAILURE
+4.1.1.1,item name,category,brand,price,quantity,expected,
+,kariyot,cereal,talma,15.99,50,SUCCESS
+4.1.1.2,item name,category,brand,price,quantity,expected,"	# here acceptance adds and re-adds item"
+,kariyot,cereal,talma,15.99,50,FAILURE
+4.1.2.1,item name, expected"	# here acceptance first adds item"
+,kariyot,cereal,talma,15.99,50,FAILURE
+4.1.2.2,item name, expected"	# here acceptance doesn't add in the first place"
+,kariyot,cereal,talma,15.99,50,FAILURE
+4.1.3.1,item name,category,price,quantity,expected
+,kariyot,cereal,talma,15.99,FAILURE
+4.1.3.2,item name,category,price,quantity,expected
+,kariyot,cereal,talma,-10.45,FAILURE
+4.3.1,expected,,,,"	# here acceptance test generates the user to appoint"
+,SUCCESS
+4.3.2,expected,,,,"	# here acceptance test does NOT generate the user to appoint to owner"
+,John_the_owner,FAILURE
+4.5.1,expected,,,,"	# here acceptance test generates the user to appoint"
+,SUCCESS
+4.5.2,expected,,,,"	# here acceptance test does NOT generate the user to appoint to manager"
+,FAILURE
+4.6.1,expected,,,,"	# here acceptance test generates store owner"
+,SUCCESS
+4.6.2,expected,,,,"	# here acceptance test generates store owner and then repeals"
+,FAILURE
+4.7.1,expected,,,,"	# here acceptance test generates the user, manager"
+,SUCCESS
+4.7.2,expected,,,, ""#  here acceptance test generates store, manager, owner
+,FAILURE
+4.8.1,expected,,,,"	# here acceptance test generates the user, manager"
+,SUCCESS
+4.8.1.1,expected,,,, ""#  here acceptance test generates store, manager, owner
+,SUCCESS
+4.8.1.1.1,expected,,,, ""#  here acceptance test generates store, manager, owner
+,SUCCESS
+4.8.1.1.2,expected,,,, ""#  here acceptance test generates store, manager, owner
+,SUCCESS
+4.8.1.2,expected,,,, ""#  here acceptance test generates store, manager, owner
+,SUCCESS
+4.8.1.2.1,expected,,,, ""#  here acceptance test generates store, manager, owner
+,SUCCESS
+4.8.1.2.2,expected,,,, ""#  here acceptance test generates store, manager, owner
+,SUCCESS
+4.8.2,expected,,,, ""#  here acceptance test generates store, manager, owner
+,FAILURE

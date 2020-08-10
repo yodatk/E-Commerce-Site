@@ -1,0 +1,31 @@
+2.2.1,,,"a,b,c"
+,email@gmail.com,username1,1%qWabcd,SUCCESS
+2.2.2,,,
+,,username2,1@qWabcd,FAILURE
+,email@gmail.com,,1@qWabcd,FAILURE
+,email@gmail.com,username3,,FAILURE
+,,,,FAILURE
+2.2.3,,,
+,email@gmail.com,"    ",1%qWabcd,FAILURE
+,email@gmail.com,username invalid,1%qWabcd,FAILURE
+,email@gmail.com,username,password_invalid,FAILURE
+,Tomer.com,username,1%qWabcd,FAILURE
+,Tomer@.com,username,1%qWabcd,FAILURE
+,Tomer@com,username,1%qWabcd,FAILURE
+,@gmail.com,username,1%qWabcd,FAILURE
+2.2.4,,,
+,email@gmail.com,username,1%qWabcd,FAILURE
+2.3.1,,,
+,username_231,1%qWabcd,SUCCESS
+2.3.2,,,
+,username_232,,FAILURE
+,,1%qWabcd,FAILURE
+2.3.3,,,
+,,,FAILURE
+2.3.4,,,
+,username_233,password,FAILURE
+2.7,,,
+3.1.1,,,
+,testuser1,passworD1234$,SUCCESS
+3.1.2,,,
+,testuser2,passworD1234$,FAILURE

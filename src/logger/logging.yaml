@@ -1,0 +1,55 @@
+version: 1
+
+formatters:
+    standard:
+        format: "[%(asctime)s][%(name)-12s][%(message)s]"
+        datefmt: "%m-%d %H:%M"
+    error:
+        format: "[%(asctime)s][%(name)-12s][%(message)s]"
+        datefmt: "%m-%d %H:%M"
+    colored:
+        (): "colorlog.ColoredFormatter"
+        format: "%(cyan)s[%(asctime)s]%(reset)s%(yellow)s[%(name)-12s]%(reset)s%(red)s[%(message)s]"
+        datefmt: "%m-%d %H:%M"
+
+filters:
+    error_filter:
+        (): src.logger.RemoveLevelFilter
+        levelToSkip: ERROR
+
+handlers:
+    console:
+        class: logging.StreamHandler
+        level: DEBUG
+        formatter: colored
+        stream: ext://sys.stdout
+
+
+    info_file_handler:
+        level: INFO
+        class: logging.handlers.RotatingFileHandler
+        formatter: standard
+        filename: ./logs/info.log
+        maxBytes: 10485760 # 10MB
+        backupCount: 20
+        encoding: utf8
+        filters: [error_filter]
+
+    error_file_handler:
+        level: ERROR
+        class: logging.handlers.RotatingFileHandler
+        formatter: error
+        filename: ./logs/errors.log
+        maxBytes: 10485760 # 10MB
+        backupCount: 20
+        encoding: utf8
+
+
+
+loggers:
+    main_app_logger:
+        # I want this handler to handle ALL levels, using NOTSET won't work, stay on DEBUG
+        level: DEBUG
+        handlers: [console, info_file_handler, error_file_handler]
+        propagate: no
+

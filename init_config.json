@@ -1,0 +1,351 @@
+{
+  "COMMENTS_ONLY": {
+    "comment1": "the following function are available for init purposes.",
+    "comment2": " 'init_flow' is a list of the init functions, where func is the value of the wanted function, and args is a dictionary of the needed arguments for that function",
+    "comment3": "Notice that the first user to be registered is going to be the admin",
+    "available_functions": {
+      "register": {
+        "username": "string",
+        "email": "string",
+        "password": "string",
+        "user_id": "int"
+      },
+      "login": {
+        "user_id": "int",
+        "username": "string",
+        "password": "string"
+      },
+      "logout": {
+        "user_id": "int"
+      },
+      "new_store": {
+        "user_id": "int",
+        "store_name": "string"
+      },
+      "close_store": {
+        "user_id": "int",
+        "store_name": "string"
+      },
+      "open_store": {
+        "user_id": "int",
+        "store_name": "string"
+      },
+      "add_store_owner": {
+        "user_id": "int",
+        "username_added": "string",
+        "store_name": "string"
+      },
+      "approve_new_owner": {
+        "user_id": "int",
+        "candidate_name": "str",
+        "store_name": "str",
+        "response": 1
+      },
+      "deny_new_owner": {
+        "user_id": "int",
+        "candidate_name": "str",
+        "store_name": "str",
+        "response": 2
+      },
+      "add_admin": {
+        "user_id": "int",
+        "added_user_name": "string"
+      },
+      "add_store_manager": {
+        "user_id": "int",
+        "store_name": "string",
+        "username_added": "string"
+      },
+      "delete_owner_from_store": {
+        "user_id": "int",
+        "store_name": "string",
+        "removed_username": "string"
+      },
+      "delete_manager_from_store": {
+        "user_id": "int",
+        "store_name": "string",
+        "removed_username": "string"
+      },
+      "edit_permissions": {
+        "user_id": "int",
+        "username_edited": "string",
+        "store_name": "string",
+        "can_manage_inventory": "boolean",
+        "can_manage_discount": "boolean",
+        "open_and_close_store": "boolean",
+        "watch_purchase_history": "boolean",
+        "appoint_new_store_manager": "boolean",
+        "appoint_new_store_owner": "boolean"
+      },
+      "add_product_to_store": {
+        "user_id": "int",
+        "storename": "string",
+        "product_name": "string",
+        "base_price": "int",
+        "quantity": "int",
+        "brand": "string",
+        "categories": "string",
+        "description": "string"
+      },
+      "edit_product": {
+        "user_id": "int",
+        "storename": "string",
+        "product_name": "string",
+        "new_price": "int",
+        "quantity": "int",
+        "brand": "string",
+        "categories": "string",
+        "description": "string"
+      },
+      "remove_product": {
+        "user_id": "int",
+        "storename": "string",
+        "product_name": "string"
+      },
+      "remove_discount": {
+        "user_id": "int",
+        "discount_id": "int",
+        "storename": "string"
+      },
+      "new_discount": {
+        "user_id": "int",
+        "product_name": "string",
+        "storename": "string",
+        "discount_type": "string",
+        "percent": "string",
+        "category": "string",
+        "free_per_x": "string",
+        "overall_product_price": "string",
+        "overall_category_price": "string",
+        "overall_product_quantity": "string",
+        "overall_category_quantity": "string",
+        "up_to_date": "string",
+        "basket_size": "string"
+      },
+      "edit_discount": {
+        "user_id": "int",
+        "discount_id": "int",
+        "product_name": "string",
+        "storename": "string",
+        "discount_type": "string",
+        "percent": "string",
+        "category": "string",
+        "free_per_x": "string",
+        "overall_product_price": "string",
+        "overall_category_price": "string",
+        "overall_product_quantity": "string",
+        "overall_category_quantity": "string",
+        "up_to_date": "string",
+        "basket_size": "string"
+      },
+      "combine_discount": {
+        "user_id": "int",
+        "storename": "string",
+        "discount_id_list": "list of strings",
+        "operator": "string"
+      },
+      "add_policies": {
+        "user_id": "int",
+        "storename": "string",
+        "min_basket_quantity": "int",
+        "max_basket_quantity": "int",
+        "product_name": "string",
+        "min_product_quantity": "int",
+        "max_product_quantity": "int",
+        "category": "string",
+        "min_category_quantity": "int",
+        "max_category_quantity": "int",
+        "day": "string"
+      },
+      "remove_policy": {
+        "user_id": "int",
+        "policy_id": "int",
+        "storename": "string"
+      },
+      "edit_policy": {
+        "user_id": "int",
+        "storename": "string",
+        "policy_id": "int",
+        "min_basket_quantity": "int",
+        "max_basket_quantity": "int",
+        "product_name": "string",
+        "min_product_quantity": "int",
+        "max_product_quantity": "int",
+        "category": "string",
+        "min_category_quantity": "int",
+        "max_category_quantity": "int",
+        "day": "string"
+      },
+      "combine_policies": {
+        "user_id": "int",
+        "storename": "string",
+        "policies_id_list": "list of strings",
+        "operator": "string"
+      },
+      "add_item_to_shopping_cart": {
+        "user_id": "string",
+        "product_name": "string",
+        "store_name": "string",
+        "quantity": "int"
+      },
+      "delete_item_from_shopping_cart": {
+        "user_id": "int",
+        "product_name": "string",
+        "store_name": "string"
+      },
+      "update_item_from_shopping_cart": {
+        "user_id": "string",
+        "product_name": "string",
+        "store_name": "string",
+        "quantity": "int"
+      }
+    }
+  },
+    "init_flow": [
+      {
+        "func": "register",
+        "args": {
+          "user_id": 1,
+          "username": "u1",
+          "email": "u11111@gmail.com",
+          "password": "Parker51!"
+        }
+      },
+      {
+        "func": "register",
+        "args": {
+          "user_id": 2,
+          "username": "u2",
+          "email": "u22222@gmail.com",
+          "password": "Parker51!"
+        }
+      },
+      {
+        "func": "register",
+        "args": {
+          "user_id": 3,
+          "username": "u3",
+          "email": "u33333@gmail.com",
+          "password": "Parker51!"
+        }
+      },
+      {
+        "func": "register",
+        "args": {
+          "user_id": 4,
+          "username": "u4",
+          "email": "u44444@gmail.com",
+          "password": "Parker51!"
+        }
+      },
+      {
+        "func": "register",
+        "args": {
+          "user_id": 5,
+          "username": "u5",
+          "email": "u55555@gmail.com",
+          "password": "Parker51!"
+        }
+      },
+      {
+        "func": "login",
+        "args": {
+          "user_id": 1,
+          "username": "u2",
+          "password": "Parker51!"
+        }
+      },
+      {
+        "func": "new_store",
+        "args": {
+          "user_id": 2,
+          "store_name": "s1"
+        }
+      },
+      {
+        "func": "add_product_to_store",
+        "args": {
+          "user_id": 2,
+          "store_name": "s1",
+          "product_name": "diapers",
+          "base_price": 30,
+          "quantity": 20,
+          "brand": "",
+          "categories": "",
+          "description": ""
+        }
+      },
+      {
+        "func": "add_store_manager",
+        "args": {
+          "user_id": 2,
+          "store_name": "s1",
+          "username_added": "u3"
+        }
+      },
+      {
+        "func": "edit_permissions",
+        "args": {
+          "user_id": 2,
+          "username_edited": "u3",
+          "store_name": "s1",
+          "can_manage_inventory": true,
+          "can_manage_discount": false,
+          "open_and_close_store": false,
+          "watch_purchase_history": false,
+          "appoint_new_store_manager": true,
+          "appoint_new_store_owner": false
+        }
+      },
+      {
+        "func": "logout",
+        "args": {
+          "user_id": 2
+        }
+      },
+      {
+        "func": "login",
+        "args": {
+          "user_id": 1,
+          "username": "u3",
+          "password": "Parker51!"
+        }
+      },
+      {
+        "func": "add_store_manager",
+        "args": {
+          "user_id": 3,
+          "store_name": "s1",
+          "username_added": "u4"
+        }
+      },
+      {
+        "func": "logout",
+        "args": {
+          "user_id": 3
+        }
+      },
+      {
+        "func": "login",
+        "args": {
+          "user_id": 1,
+          "username": "u4",
+          "password": "Parker51!"
+        }
+      },
+      {
+        "func": "add_store_manager",
+        "args": {
+          "user_id": 4,
+          "store_name": "s1",
+          "username_added": "u5"
+        }
+      },
+      {
+        "func": "logout",
+        "args": {
+          "user_id": 4
+        }
+      }
+    ]
+}

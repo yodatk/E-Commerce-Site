@@ -1,0 +1,33 @@
+ * Debugger is active!
+ * Debugger PIN: 241-903-012
+(9840) wsgi starting up on https://127.0.0.1:443
+(9840) accepted ('127.0.0.1', 62622)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\hubs\selects.py", line 59, in wait
+    listeners.get(fileno, hub.noop).cb(fileno)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\greenthread.py", line 221, in main
+    result = function(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\wsgi.py", line 818, in process_request
+    proto.__init__(conn_state, self)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\wsgi.py", line 357, in __init__
+    self.handle()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\wsgi.py", line 390, in handle
+    self.handle_one_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\wsgi.py", line 419, in handle_one_request
+    self.raw_requestline = self._read_request_line()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\wsgi.py", line 402, in _read_request_line
+    return self.rfile.readline(self.server.url_length_limit)
+  File "C:\ProgramData\Anaconda3\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\green\ssl.py", line 241, in recv_into
+    return self._base_recv(nbytes, flags, into=True, buffer_=buffer)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\green\ssl.py", line 256, in _base_recv
+    read = self.read(nbytes, buffer_)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\green\ssl.py", line 176, in read
+    super(GreenSSLSocket, self).read, *args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\eventlet\green\ssl.py", line 150, in _call_trampolining
+    return func(*a, **kw)
+  File "C:\ProgramData\Anaconda3\lib\ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:2508)
+Removing descriptor: 1088

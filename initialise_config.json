@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "_user_id": 1,
+      "_user_name": "admin",
+      "_password": "$pbkdf2-sha256$29000$PKf0vrc2xvifc26NcS6FUA$kXHeoFNuOsLJY/fHJ/UP6wy4fk2FBZAEuQZ7mgunUgA",
+      "_email": "tomergon@gmail.com",
+      "_is_admin": 1
+    },
+    {
+      "_user_id": 2,
+      "_user_name": "owner",
+      "_password": "$pbkdf2-sha256$29000$PKf0vrc2xvifc26NcS6FUA$kXHeoFNuOsLJY/fHJ/UP6wy4fk2FBZAEuQZ7mgunUgA",
+      "_email": "tomergon@gmail.com",
+      "_is_admin": 0
+    },
+    {
+      "_user_id": 3,
+      "_user_name": "manager",
+      "_password": "$pbkdf2-sha256$29000$PKf0vrc2xvifc26NcS6FUA$kXHeoFNuOsLJY/fHJ/UP6wy4fk2FBZAEuQZ7mgunUgA",
+      "_email": "tomergon@gmail.com",
+      "_is_admin": 0
+    }
+  ],
+  "stores": [
+    {
+      "_name": "Store",
+      "_initial_owner": "owner"
+    }
+  ],
+  "products_in_inventory": [
+    {
+      "id": 1,
+      "_product_pk": 1,
+      "_store_name": "Store",
+      "_price": 3.0,
+      "_quantity": 10,
+      "_name": "Avocado",
+      "_brand": "Galil",
+      "_categories": [
+        "Food"
+      ],
+      "_description": "Best Avocado In middle East"
+    }
+  ],
+  "products": [
+    {
+      "id": 1
+    }
+  ],
+  "permissions": [
+  ]
+}
